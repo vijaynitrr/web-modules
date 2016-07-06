@@ -1,0 +1,83 @@
+<?php ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" name="author" content="vijay khandal">
+	<link rel="icon" href="image/title_icon.png">
+	<title>Assignment-1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> 
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.2.min.js"></script> 
+	<script type="text/javascript" src="script/assign-1.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/assign-1.css">
+</head>
+<body>
+<header>
+	<div id="div_1">
+		<a href="http://www.naukri.com" id="A_1" >
+		<img src="image/naukri_Logo.png" alt="Naukri.com,India's No.1 Job Site" title="Naukri.com" id="img_1"> 
+		</a>
+		<p id="P_1"> Already Registered? <a href="#login">Login</a> here
+	</p>
+	</div>
+</header>
+<div id="menu-container">
+	<ul class="nav-bar" id="nbar">
+		<li id="act">Personal</li>
+		<li>Employment</li>
+		<li>Education</li>
+	</ul>
+</div>
+<div id="form-container">
+<form action="generateOtp.php" method="post" onsubmit="return validateForm()"> 
+	<div class="row">
+		<LABEL for="inp_1" id="label_1">Name</LABEL>
+		<input type="text" name="username" id="inp_1" placeholder="Enter your full name" />
+	</div>
+	<div class="row">
+		<LABEL for="email" id="label_2">Email ID<sup><span style="font-size:70%;color:red;" id="star">&starf;</span></sup></LABEL>
+		<input type="text" name="email-id" id="inp_2" placeholder="Register using Active Email id" onblur="return validateEmail()" />
+		<div id="side-contents"><p id="side-content">Register using active email to recieve relevant job recommendations.</p></div>
+	</div>
+	<div id="err-mail"></div>
+	<div class="row">
+		<LABEL for="password" id="label_3">Create Password<sup><span style="font-size:70%;color:red;" id="star">&starf;</span></sup></LABEL>
+		<input type="password" name="user-pass" maxlength="40" id="inp_3" placeholder="Minimum 6 characters" onblur="return validatePass()" />
+		<span id="span_pass">show</span>
+		<div id="side-contents"><p id="side-content">Password is Case-Sensitive. Use 6 to 40 characters.</p></div>
+	</div>
+	<div id="err-pass"></div>
+	<div class="row">
+		<LABEL for="mobile" id="label_4">Mobile number<sup> <span style="font-size:70%;color:red;" id="star">&starf;</span></sup></LABEL>
+		<input type="text" name="inputDisable" id="inp_Dis" maxlength="3">
+		<input type="tel" name="mobile-number" id="inp_4" placeholder="where recuriter can contact you" onblur="return validateNumber()" />
+		<div id="side-contents"><p id="side-content">Recruiters will contact you on this number.</p></div>
+	</div>
+	<div id="err-mobile"></div>
+	<div class="row">
+	<LABEL for="location" id="label_5">Location<sup><span style="font-size:70%;color:red;" id="star">&starf;</span></sup></LABEL>
+	<select id="inp_5" required="true">
+		<option value="loc1">Delhi</option>
+		<option value="loc2">Noida</option>
+		<option value="loc3">Jaipur</option>
+		<option value="loc4">Pune</option>
+		<option value="loc5">Raipur</option>
+	</select>
+	</div>
+	<div class="row1">
+		<input type="checkbox" name="agree" id="check" />
+		<label for="check" id="label_6">I agreed to the <a href="#terms">Terms and Conditions </a> governing the use of Naukri.com.</label> <label for="check" id="label_7">I have reviewed the default <a href="#mailer">Mailer and Communications settings.</a></label>
+	</div>
+	<button type="submit" name="submit" id="Button_1">Register Now</button>
+</form>
+</div>
+<footer>
+	<a href="#about" target="_blank" id="link-1">About us</a>
+	<a href="#contact" target="_blank" id="link-2">Contact us</a>
+	<a href="#faq" target="_blank" id="link-3">FAQs</a>
+	<a href="#terms" target="_blank" id="link-4">Terms and Conditions</a>
+	<a href="#report" target="_blank" id="link-5">Report a Problem</a>
+	<a href="#privacy" target="_blank" id="link-6">Privacy Problem</a>
+	<p>All rights reserved © 2016 Vijay khandal.</p>
+</footer>
+</body>
+</html>
